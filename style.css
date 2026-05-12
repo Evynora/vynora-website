@@ -496,29 +496,6 @@ nav.scrolled {
   background: rgba(201, 169, 110, 0.3);
 }
 
-/* Scroll indicator */
-.scroll-ind {
-  position: absolute;
-  bottom: 44px;
-  right: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--muted);
-  z-index: 2;
-  animation: scrollFloat 2.5s ease-in-out infinite;
-}
-.scroll-ind::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 52px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-}
 @keyframes scrollFloat {
   0%,
   100% {
@@ -528,8 +505,6 @@ nav.scrolled {
     transform: translateY(9px);
   }
 }
-
-
 
 /* ═══════════════════════════════════════════
    BUTTONS
@@ -780,7 +755,7 @@ nav.scrolled {
 }
 .svc-num {
   font-family: var(--serif);
-  font-size: 0.82rem;
+  font-size: 1.6rem;
   color: var(--gold);
   font-style: italic;
   margin-bottom: 32px;
@@ -830,7 +805,7 @@ nav.scrolled {
   align-items: center;
 }
 .about-visual {
-  height: 580px;
+  height: 600px;
   position: relative;
   background: linear-gradient(155deg, #d0c4ae 0%, #b8a280 50%, #9e8462 100%);
   overflow: hidden;
@@ -1215,8 +1190,8 @@ nav.scrolled {
   margin-bottom: 28px;
 }
 .insight-img-fill {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   transition: transform 0.7s var(--ease);
 }
 .insight-card:hover .insight-img-fill {
@@ -1656,6 +1631,29 @@ footer {
   }
   .form-row {
     grid-template-columns: 1fr;
+  }
+  .about-visual {
+    height: 450px;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .process-steps::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 60px;
+    right: 60px;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(168, 140, 123, 0.4),
+      transparent
+    );
+    z-index: 0;
   }
 }
 @media (max-width: 480px) {
