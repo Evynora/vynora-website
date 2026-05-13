@@ -807,7 +807,7 @@ nav.scrolled {
 .about-visual {
   height: 600px;
   position: relative;
-  background: linear-gradient(155deg, #d0c4ae 0%, #b8a280 50%, #9e8462 100%);
+
   overflow: hidden;
 }
 .about-visual::after {
